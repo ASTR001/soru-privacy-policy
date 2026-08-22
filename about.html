@@ -11,18 +11,23 @@
 
     <meta
         name="theme-color"
-        content="#6D28D9"
+        content="#07592B"
     >
 
     <title>About Soru</title>
 
     <style>
+        /* =========================================================
+           GLOBAL
+        ========================================================== */
+
         * {
             box-sizing: border-box;
         }
 
         body {
             margin: 0;
+
             font-family:
                 -apple-system,
                 BlinkMacSystemFont,
@@ -32,100 +37,128 @@
                 sans-serif;
 
             line-height: 1.7;
+
             color: #1f2937;
-            background: #f8fafc;
+
+            background: #f7faf8;
         }
 
         .container {
             max-width: 950px;
+
             margin: 0 auto;
+
             padding: 40px 20px 60px;
         }
 
-        /* ---------------------------------------------------------
-           HERO
-        --------------------------------------------------------- */
+
+        /* =========================================================
+           HERO / HEADER
+        ========================================================== */
 
         .hero {
             position: relative;
+
             overflow: hidden;
+
             padding: 42px 30px;
+
             margin-bottom: 28px;
 
             color: #ffffff;
 
             background: linear-gradient(
                 135deg,
-    #07592B,
-    #087A3B,
-    #0A8F47
+                #07592B 0%,
+                #08743A 55%,
+                #0A8744 100%
             );
 
             border-radius: 28px;
 
             box-shadow:
-                0 20px 45px rgba(109, 40, 217, 0.18);
+                0 20px 45px rgba(7, 89, 43, 0.20);
         }
 
         .hero::before {
             content: "";
+
             position: absolute;
 
-            width: 180px;
-            height: 180px;
+            width: 210px;
+            height: 210px;
 
-            right: -60px;
-            top: -70px;
+            right: -75px;
+            top: -95px;
 
-            background: rgba(255, 255, 255, 0.10);
+            background: rgba(255, 255, 255, 0.09);
 
             border-radius: 50%;
         }
 
         .hero::after {
             content: "";
+
             position: absolute;
 
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
 
-            left: -45px;
-            bottom: -55px;
+            left: -65px;
+            bottom: -75px;
 
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.07);
 
             border-radius: 50%;
         }
 
         .hero-content {
             position: relative;
+
             z-index: 1;
         }
 
+
+        /* =========================================================
+           BRAND LABEL
+        ========================================================== */
+
         .brand {
             display: inline-flex;
+
             align-items: center;
 
-            padding: 7px 13px;
+            padding: 7px 14px;
+
             margin-bottom: 16px;
 
-            background: rgba(255, 255, 255, 0.14);
+            background: rgba(255, 255, 255, 0.13);
 
             border: 1px solid rgba(255, 255, 255, 0.20);
 
             border-radius: 30px;
 
             font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 0.4px;
+
+            font-weight: 800;
+
+            letter-spacing: 0.6px;
         }
+
+
+        /* =========================================================
+           HERO TITLE
+        ========================================================== */
 
         .hero h1 {
             margin: 0 0 10px;
 
             font-size: 38px;
+
             line-height: 1.2;
+
             font-weight: 900;
+
             letter-spacing: -1px;
         }
 
@@ -134,19 +167,20 @@
 
             margin: 0;
 
-            color: rgba(255, 255, 255, 0.86);
+            color: rgba(255, 255, 255, 0.88);
 
             font-size: 16px;
         }
 
-        /* ---------------------------------------------------------
+
+        /* =========================================================
            CONTENT CARD
-        --------------------------------------------------------- */
+        ========================================================== */
 
         .card {
             background: #ffffff;
 
-            border: 1px solid #e5e7eb;
+            border: 1px solid #e4ebe7;
 
             border-radius: 22px;
 
@@ -166,14 +200,22 @@
             margin-bottom: 0;
         }
 
+
+        /* =========================================================
+           HEADINGS
+        ========================================================== */
+
         h2 {
             margin: 0 0 12px;
 
             color: #111827;
 
             font-size: 21px;
+
             line-height: 1.3;
+
             font-weight: 850;
+
             letter-spacing: -0.3px;
         }
 
@@ -183,13 +225,20 @@
             color: #111827;
 
             font-size: 16px;
+
             font-weight: 800;
         }
+
+
+        /* =========================================================
+           TEXT
+        ========================================================== */
 
         p {
             margin: 0 0 12px;
 
             font-size: 14px;
+
             color: #4b5563;
         }
 
@@ -197,9 +246,10 @@
             margin-bottom: 0;
         }
 
-        /* ---------------------------------------------------------
+
+        /* =========================================================
            FEATURE GRID
-        --------------------------------------------------------- */
+        ========================================================== */
 
         .feature-grid {
             display: grid;
@@ -215,17 +265,34 @@
         .feature {
             padding: 18px;
 
-            background: #fafafa;
+            background: #fbfdfc;
 
-            border: 1px solid #eeeeee;
+            border: 1px solid #e5ece8;
 
             border-radius: 17px;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
         }
+
+        .feature:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 8px 20px rgba(7, 89, 43, 0.07);
+        }
+
+
+        /* =========================================================
+           FEATURE ICON
+        ========================================================== */
 
         .feature-icon {
             display: flex;
 
             align-items: center;
+
             justify-content: center;
 
             width: 42px;
@@ -233,9 +300,9 @@
 
             margin-bottom: 12px;
 
-            color: #6d28d9;
+            color: #07592B;
 
-            background: rgba(109, 40, 217, 0.09);
+            background: rgba(7, 89, 43, 0.09);
 
             border-radius: 13px;
 
@@ -244,15 +311,18 @@
 
         .feature p {
             font-size: 13px;
+
             line-height: 1.55;
         }
 
-        /* ---------------------------------------------------------
+
+        /* =========================================================
            LIST
-        --------------------------------------------------------- */
+        ========================================================== */
 
         ul {
             margin: 12px 0 0;
+
             padding-left: 22px;
         }
 
@@ -268,31 +338,37 @@
             margin-bottom: 0;
         }
 
-        /* ---------------------------------------------------------
+
+        /* =========================================================
            MISSION
-        --------------------------------------------------------- */
+        ========================================================== */
 
         .mission {
             padding: 24px;
 
             background: linear-gradient(
                 135deg,
-                #f5f3ff,
-                #faf5ff
+                #effaf3,
+                #f5fbf7
             );
 
-            border: 1px solid #e9d5ff;
+            border: 1px solid #cce8d5;
 
             border-radius: 20px;
         }
 
-        .mission p {
-            color: #4c1d95;
+        .mission h2 {
+            color: #07592B;
         }
 
-        /* ---------------------------------------------------------
+        .mission p {
+            color: #315d42;
+        }
+
+
+        /* =========================================================
            VALUES
-        --------------------------------------------------------- */
+        ========================================================== */
 
         .values {
             display: grid;
@@ -310,7 +386,7 @@
 
             background: #ffffff;
 
-            border: 1px solid #e5e7eb;
+            border: 1px solid #e4ebe7;
 
             border-radius: 16px;
 
@@ -322,7 +398,7 @@
 
             margin-bottom: 5px;
 
-            color: #111827;
+            color: #07592B;
 
             font-size: 14px;
         }
@@ -337,18 +413,45 @@
             line-height: 1.5;
         }
 
-        /* ---------------------------------------------------------
+
+        /* =========================================================
+           PRIVACY CARD
+        ========================================================== */
+
+        .privacy-box {
+            padding: 22px;
+
+            background: #f5faf7;
+
+            border: 1px solid #d7e9dd;
+
+            border-radius: 18px;
+        }
+
+        .privacy-box h2 {
+            color: #07592B;
+        }
+
+
+        /* =========================================================
            CONTACT
-        --------------------------------------------------------- */
+        ========================================================== */
 
         .contact {
-            background: #111827;
+            background: linear-gradient(
+                135deg,
+                #064622,
+                #07592B
+            );
 
             border-radius: 22px;
 
             padding: 26px;
 
             color: #ffffff;
+
+            box-shadow:
+                0 12px 30px rgba(7, 89, 43, 0.15);
         }
 
         .contact h2 {
@@ -356,50 +459,63 @@
         }
 
         .contact p {
-            color: #d1d5db;
+            color: rgba(255, 255, 255, 0.78);
         }
 
         .email {
             display: inline-block;
 
             margin-top: 8px;
+
             padding: 10px 15px;
 
             color: #ffffff;
 
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.10);
 
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.16);
 
             border-radius: 12px;
 
             font-size: 14px;
+
             font-weight: 700;
 
             text-decoration: none;
+
+            transition:
+                background 0.2s ease;
         }
 
         .email:hover {
-            background: rgba(255, 255, 255, 0.14);
+            background: rgba(255, 255, 255, 0.17);
         }
 
-        /* ---------------------------------------------------------
+
+        /* =========================================================
            FOOTER
-        --------------------------------------------------------- */
+        ========================================================== */
 
         footer {
             padding-top: 10px;
 
             text-align: center;
 
-            color: #9ca3af;
+            color: #8a9991;
 
             font-size: 12px;
         }
 
-        /* ---------------------------------------------------------
-           RESPONSIVE
-        --------------------------------------------------------- */
+        footer p {
+            color: #8a9991;
+
+            font-size: 12px;
+        }
+
+
+        /* =========================================================
+           RESPONSIVE - TABLET / MOBILE
+        ========================================================== */
 
         @media (max-width: 700px) {
 
@@ -441,21 +557,41 @@
             }
         }
 
+
+        /* =========================================================
+           SMALL MOBILE
+        ========================================================== */
+
         @media (max-width: 400px) {
 
             .values {
                 grid-template-columns: 1fr;
             }
+
+            .hero {
+                padding: 27px 19px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .card {
+                padding: 18px;
+            }
         }
+
     </style>
 </head>
+
 
 <body>
 
 <div class="container">
 
+
     <!-- =========================================================
-         HERO
+         ABOUT SORU HEADER
     ========================================================== -->
 
     <header class="hero">
@@ -466,7 +602,9 @@
                 SORU FOOD DELIVERY
             </div>
 
-            <h1>About Soru</h1>
+            <h1>
+                About Soru
+            </h1>
 
             <p>
                 Connecting customers, delivery partners, and businesses
@@ -480,14 +618,16 @@
 
 
     <!-- =========================================================
-         INTRODUCTION
+         WHAT IS SORU
     ========================================================== -->
 
     <div class="card">
 
         <section>
 
-            <h2>What is Soru?</h2>
+            <h2>
+                What is Soru?
+            </h2>
 
             <p>
                 Soru is a modern food delivery platform designed to make
@@ -506,12 +646,14 @@
 
 
         <!-- =====================================================
-             CUSTOMER
+             CUSTOMER APP
         ====================================================== -->
 
         <section>
 
-            <h2>Soru Customer</h2>
+            <h2>
+                Soru Customer
+            </h2>
 
             <p>
                 The Soru Customer app provides a convenient way for users
@@ -519,7 +661,9 @@
                 and stay updated throughout the delivery process.
             </p>
 
+
             <div class="feature-grid">
+
 
                 <div class="feature">
 
@@ -527,7 +671,9 @@
                         🍽️
                     </div>
 
-                    <h3>Easy Food Ordering</h3>
+                    <h3>
+                        Easy Food Ordering
+                    </h3>
 
                     <p>
                         Browse available meals and conveniently place
@@ -543,7 +689,9 @@
                         📍
                     </div>
 
-                    <h3>Delivery Location</h3>
+                    <h3>
+                        Delivery Location
+                    </h3>
 
                     <p>
                         Manage delivery addresses and use location-based
@@ -559,7 +707,9 @@
                         📦
                     </div>
 
-                    <h3>Order Tracking</h3>
+                    <h3>
+                        Order Tracking
+                    </h3>
 
                     <p>
                         Stay informed about your order status and
@@ -575,7 +725,9 @@
                         🔔
                     </div>
 
-                    <h3>Real-Time Updates</h3>
+                    <h3>
+                        Real-Time Updates
+                    </h3>
 
                     <p>
                         Receive notifications about orders, deliveries,
@@ -584,23 +736,27 @@
 
                 </div>
 
+
             </div>
 
         </section>
 
 
         <!-- =====================================================
-             DRIVER
+             DRIVER APP
         ====================================================== -->
 
         <section>
 
-            <h2>Soru Driver</h2>
+            <h2>
+                Soru Driver
+            </h2>
 
             <p>
                 The Soru Driver app helps delivery partners efficiently
                 manage assigned orders and complete deliveries.
             </p>
+
 
             <ul>
 
@@ -639,7 +795,9 @@
 
         <section>
 
-            <h2>Soru Manager & Admin</h2>
+            <h2>
+                Soru Manager & Admin
+            </h2>
 
             <p>
                 The Soru Manager/Admin platform provides operational
@@ -647,7 +805,9 @@
                 activities efficiently.
             </p>
 
+
             <div class="feature-grid">
+
 
                 <div class="feature">
 
@@ -655,7 +815,9 @@
                         📋
                     </div>
 
-                    <h3>Order Management</h3>
+                    <h3>
+                        Order Management
+                    </h3>
 
                     <p>
                         Monitor and manage customer orders throughout
@@ -671,7 +833,9 @@
                         👥
                     </div>
 
-                    <h3>User Management</h3>
+                    <h3>
+                        User Management
+                    </h3>
 
                     <p>
                         Manage customers, delivery partners, and
@@ -687,7 +851,9 @@
                         🍴
                     </div>
 
-                    <h3>Menu Management</h3>
+                    <h3>
+                        Menu Management
+                    </h3>
 
                     <p>
                         Manage food items, meals, availability, and
@@ -703,7 +869,9 @@
                         📊
                     </div>
 
-                    <h3>Operations</h3>
+                    <h3>
+                        Operations
+                    </h3>
 
                     <p>
                         Monitor daily delivery activities and manage
@@ -711,6 +879,7 @@
                     </p>
 
                 </div>
+
 
             </div>
 
@@ -720,14 +889,16 @@
 
 
     <!-- =========================================================
-         MISSION
+         OUR MISSION
     ========================================================== -->
 
     <div class="card">
 
         <section class="mission">
 
-            <h2>Our Mission</h2>
+            <h2>
+                Our Mission
+            </h2>
 
             <p>
                 Our mission is to create a simple, reliable, and connected
@@ -753,18 +924,24 @@
 
         <section>
 
-            <h2>Why Soru?</h2>
+            <h2>
+                Why Soru?
+            </h2>
 
             <p>
                 Soru is built with a focus on convenience, reliability,
                 efficiency, and connectivity.
             </p>
 
+
             <div class="values">
+
 
                 <div class="value">
 
-                    <strong>Simple</strong>
+                    <strong>
+                        Simple
+                    </strong>
 
                     <span>
                         Easy-to-use experiences designed for everyday
@@ -776,7 +953,9 @@
 
                 <div class="value">
 
-                    <strong>Reliable</strong>
+                    <strong>
+                        Reliable
+                    </strong>
 
                     <span>
                         Dependable tools for managing orders and
@@ -788,7 +967,9 @@
 
                 <div class="value">
 
-                    <strong>Connected</strong>
+                    <strong>
+                        Connected
+                    </strong>
 
                     <span>
                         Customers, drivers, and businesses stay
@@ -800,7 +981,9 @@
 
                 <div class="value">
 
-                    <strong>Efficient</strong>
+                    <strong>
+                        Efficient
+                    </strong>
 
                     <span>
                         Smart tools designed to simplify daily
@@ -808,6 +991,7 @@
                     </span>
 
                 </div>
+
 
             </div>
 
@@ -824,7 +1008,9 @@
 
         <section>
 
-            <h2>Our Commitment</h2>
+            <h2>
+                Our Commitment
+            </h2>
 
             <p>
                 At Soru, we continuously improve our platform based on
@@ -848,14 +1034,16 @@
 
 
     <!-- =========================================================
-         PRIVACY
+         PRIVACY & SECURITY
     ========================================================== -->
 
     <div class="card">
 
-        <section>
+        <section class="privacy-box">
 
-            <h2>Privacy & Security</h2>
+            <h2>
+                Privacy & Security
+            </h2>
 
             <p>
                 Protecting user information is an important part of the
@@ -881,7 +1069,9 @@
 
     <div class="contact">
 
-        <h2>Contact Soru</h2>
+        <h2>
+            Contact Soru
+        </h2>
 
         <p>
             If you have questions, feedback, or need assistance regarding
@@ -913,6 +1103,7 @@
         </p>
 
     </footer>
+
 
 </div>
 
