@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Learn about Soru, a modern food delivery platform connecting customers, delivery partners, and businesses."
+    >
+
+    <meta
+        name="theme-color"
+        content="#6D28D9"
+    >
+
+    <title>About Soru</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+
+            line-height: 1.7;
+            color: #1f2937;
+            background: #f8fafc;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 40px 20px 60px;
+        }
+
+        /* ---------------------------------------------------------
+           HERO
+        --------------------------------------------------------- */
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 42px 30px;
+            margin-bottom: 28px;
+
+            color: #ffffff;
+
+            background: linear-gradient(
+                135deg,
+                #6d28d9,
+                #7c3aed,
+                #9333ea
+            );
+
+            border-radius: 28px;
+
+            box-shadow:
+                0 20px 45px rgba(109, 40, 217, 0.18);
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+
+            width: 180px;
+            height: 180px;
+
+            right: -60px;
+            top: -70px;
+
+            background: rgba(255, 255, 255, 0.10);
+
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+
+            width: 120px;
+            height: 120px;
+
+            left: -45px;
+            bottom: -55px;
+
+            background: rgba(255, 255, 255, 0.08);
+
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+
+            padding: 7px 13px;
+            margin-bottom: 16px;
+
+            background: rgba(255, 255, 255, 0.14);
+
+            border: 1px solid rgba(255, 255, 255, 0.20);
+
+            border-radius: 30px;
+
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+        }
+
+        .hero h1 {
+            margin: 0 0 10px;
+
+            font-size: 38px;
+            line-height: 1.2;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            max-width: 700px;
+
+            margin: 0;
+
+            color: rgba(255, 255, 255, 0.86);
+
+            font-size: 16px;
+        }
+
+        /* ---------------------------------------------------------
+           CONTENT CARD
+        --------------------------------------------------------- */
+
+        .card {
+            background: #ffffff;
+
+            border: 1px solid #e5e7eb;
+
+            border-radius: 22px;
+
+            padding: 28px;
+
+            margin-bottom: 20px;
+
+            box-shadow:
+                0 8px 25px rgba(15, 23, 42, 0.04);
+        }
+
+        section {
+            margin-bottom: 28px;
+        }
+
+        section:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            margin: 0 0 12px;
+
+            color: #111827;
+
+            font-size: 21px;
+            line-height: 1.3;
+            font-weight: 850;
+            letter-spacing: -0.3px;
+        }
+
+        h3 {
+            margin: 0 0 7px;
+
+            color: #111827;
+
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        p {
+            margin: 0 0 12px;
+
+            font-size: 14px;
+            color: #4b5563;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ---------------------------------------------------------
+           FEATURE GRID
+        --------------------------------------------------------- */
+
+        .feature-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 14px;
+
+            margin-top: 18px;
+        }
+
+        .feature {
+            padding: 18px;
+
+            background: #fafafa;
+
+            border: 1px solid #eeeeee;
+
+            border-radius: 17px;
+        }
+
+        .feature-icon {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            width: 42px;
+            height: 42px;
+
+            margin-bottom: 12px;
+
+            color: #6d28d9;
+
+            background: rgba(109, 40, 217, 0.09);
+
+            border-radius: 13px;
+
+            font-size: 20px;
+        }
+
+        .feature p {
+            font-size: 13px;
+            line-height: 1.55;
+        }
+
+        /* ---------------------------------------------------------
+           LIST
+        --------------------------------------------------------- */
+
+        ul {
+            margin: 12px 0 0;
+            padding-left: 22px;
+        }
+
+        li {
+            margin-bottom: 8px;
+
+            color: #4b5563;
+
+            font-size: 14px;
+        }
+
+        li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ---------------------------------------------------------
+           MISSION
+        --------------------------------------------------------- */
+
+        .mission {
+            padding: 24px;
+
+            background: linear-gradient(
+                135deg,
+                #f5f3ff,
+                #faf5ff
+            );
+
+            border: 1px solid #e9d5ff;
+
+            border-radius: 20px;
+        }
+
+        .mission p {
+            color: #4c1d95;
+        }
+
+        /* ---------------------------------------------------------
+           VALUES
+        --------------------------------------------------------- */
+
+        .values {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+
+            gap: 12px;
+
+            margin-top: 18px;
+        }
+
+        .value {
+            padding: 17px;
+
+            background: #ffffff;
+
+            border: 1px solid #e5e7eb;
+
+            border-radius: 16px;
+
+            text-align: center;
+        }
+
+        .value strong {
+            display: block;
+
+            margin-bottom: 5px;
+
+            color: #111827;
+
+            font-size: 14px;
+        }
+
+        .value span {
+            display: block;
+
+            color: #6b7280;
+
+            font-size: 12px;
+
+            line-height: 1.5;
+        }
+
+        /* ---------------------------------------------------------
+           CONTACT
+        --------------------------------------------------------- */
+
+        .contact {
+            background: #111827;
+
+            border-radius: 22px;
+
+            padding: 26px;
+
+            color: #ffffff;
+        }
+
+        .contact h2 {
+            color: #ffffff;
+        }
+
+        .contact p {
+            color: #d1d5db;
+        }
+
+        .email {
+            display: inline-block;
+
+            margin-top: 8px;
+            padding: 10px 15px;
+
+            color: #ffffff;
+
+            background: rgba(255, 255, 255, 0.08);
+
+            border: 1px solid rgba(255, 255, 255, 0.12);
+
+            border-radius: 12px;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            text-decoration: none;
+        }
+
+        .email:hover {
+            background: rgba(255, 255, 255, 0.14);
+        }
+
+        /* ---------------------------------------------------------
+           FOOTER
+        --------------------------------------------------------- */
+
+        footer {
+            padding-top: 10px;
+
+            text-align: center;
+
+            color: #9ca3af;
+
+            font-size: 12px;
+        }
+
+        /* ---------------------------------------------------------
+           RESPONSIVE
+        --------------------------------------------------------- */
+
+        @media (max-width: 700px) {
+
+            .container {
+                padding: 20px 14px 40px;
+            }
+
+            .hero {
+                padding: 30px 22px;
+
+                border-radius: 23px;
+            }
+
+            .hero h1 {
+                font-size: 31px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .card {
+                padding: 21px;
+
+                border-radius: 19px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .values {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+            h2 {
+                font-size: 19px;
+            }
+        }
+
+        @media (max-width: 400px) {
+
+            .values {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- =========================================================
+         HERO
+    ========================================================== -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <div class="brand">
+                SORU FOOD DELIVERY
+            </div>
+
+            <h1>About Soru</h1>
+
+            <p>
+                Connecting customers, delivery partners, and businesses
+                through a simple, reliable, and modern food delivery
+                experience.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         INTRODUCTION
+    ========================================================== -->
+
+    <div class="card">
+
+        <section>
+
+            <h2>What is Soru?</h2>
+
+            <p>
+                Soru is a modern food delivery platform designed to make
+                ordering, delivering, and managing food services simple,
+                fast, and convenient.
+            </p>
+
+            <p>
+                Soru brings customers, delivery partners, and businesses
+                together through an integrated digital ecosystem. From
+                placing an order to delivering it to the customer's
+                doorstep, Soru helps simplify the entire process.
+            </p>
+
+        </section>
+
+
+        <!-- =====================================================
+             CUSTOMER
+        ====================================================== -->
+
+        <section>
+
+            <h2>Soru Customer</h2>
+
+            <p>
+                The Soru Customer app provides a convenient way for users
+                to discover meals, place orders, manage subscriptions,
+                and stay updated throughout the delivery process.
+            </p>
+
+            <div class="feature-grid">
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        🍽️
+                    </div>
+
+                    <h3>Easy Food Ordering</h3>
+
+                    <p>
+                        Browse available meals and conveniently place
+                        food orders from your mobile device.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        📍
+                    </div>
+
+                    <h3>Delivery Location</h3>
+
+                    <p>
+                        Manage delivery addresses and use location-based
+                        services for accurate delivery.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        📦
+                    </div>
+
+                    <h3>Order Tracking</h3>
+
+                    <p>
+                        Stay informed about your order status and
+                        delivery progress.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        🔔
+                    </div>
+
+                    <h3>Real-Time Updates</h3>
+
+                    <p>
+                        Receive notifications about orders, deliveries,
+                        subscriptions, and important account updates.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             DRIVER
+        ====================================================== -->
+
+        <section>
+
+            <h2>Soru Driver</h2>
+
+            <p>
+                The Soru Driver app helps delivery partners efficiently
+                manage assigned orders and complete deliveries.
+            </p>
+
+            <ul>
+
+                <li>
+                    View and manage assigned delivery orders.
+                </li>
+
+                <li>
+                    Access customer delivery information.
+                </li>
+
+                <li>
+                    Use maps and navigation services.
+                </li>
+
+                <li>
+                    Update delivery and order status.
+                </li>
+
+                <li>
+                    Receive delivery-related notifications.
+                </li>
+
+                <li>
+                    Manage the delivery workflow efficiently.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- =====================================================
+             MANAGER / ADMIN
+        ====================================================== -->
+
+        <section>
+
+            <h2>Soru Manager & Admin</h2>
+
+            <p>
+                The Soru Manager/Admin platform provides operational
+                tools to help businesses manage their food delivery
+                activities efficiently.
+            </p>
+
+            <div class="feature-grid">
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        📋
+                    </div>
+
+                    <h3>Order Management</h3>
+
+                    <p>
+                        Monitor and manage customer orders throughout
+                        the ordering and delivery process.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        👥
+                    </div>
+
+                    <h3>User Management</h3>
+
+                    <p>
+                        Manage customers, delivery partners, and
+                        operational users.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        🍴
+                    </div>
+
+                    <h3>Menu Management</h3>
+
+                    <p>
+                        Manage food items, meals, availability, and
+                        related business information.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        📊
+                    </div>
+
+                    <h3>Operations</h3>
+
+                    <p>
+                        Monitor daily delivery activities and manage
+                        operational workflows.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- =========================================================
+         MISSION
+    ========================================================== -->
+
+    <div class="card">
+
+        <section class="mission">
+
+            <h2>Our Mission</h2>
+
+            <p>
+                Our mission is to create a simple, reliable, and connected
+                food delivery experience for everyone involved.
+            </p>
+
+            <p>
+                We aim to reduce the complexity of food ordering and
+                delivery by bringing customers, delivery partners, and
+                businesses together on one easy-to-use platform.
+            </p>
+
+        </section>
+
+    </div>
+
+
+    <!-- =========================================================
+         WHY SORU
+    ========================================================== -->
+
+    <div class="card">
+
+        <section>
+
+            <h2>Why Soru?</h2>
+
+            <p>
+                Soru is built with a focus on convenience, reliability,
+                efficiency, and connectivity.
+            </p>
+
+            <div class="values">
+
+                <div class="value">
+
+                    <strong>Simple</strong>
+
+                    <span>
+                        Easy-to-use experiences designed for everyday
+                        food ordering and delivery.
+                    </span>
+
+                </div>
+
+
+                <div class="value">
+
+                    <strong>Reliable</strong>
+
+                    <span>
+                        Dependable tools for managing orders and
+                        deliveries.
+                    </span>
+
+                </div>
+
+
+                <div class="value">
+
+                    <strong>Connected</strong>
+
+                    <span>
+                        Customers, drivers, and businesses stay
+                        connected throughout the process.
+                    </span>
+
+                </div>
+
+
+                <div class="value">
+
+                    <strong>Efficient</strong>
+
+                    <span>
+                        Smart tools designed to simplify daily
+                        delivery operations.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- =========================================================
+         OUR COMMITMENT
+    ========================================================== -->
+
+    <div class="card">
+
+        <section>
+
+            <h2>Our Commitment</h2>
+
+            <p>
+                At Soru, we continuously improve our platform based on
+                user feedback and operational requirements.
+            </p>
+
+            <p>
+                We are committed to providing a better food delivery
+                experience while maintaining appropriate security,
+                privacy, and reliability practices.
+            </p>
+
+            <p>
+                We believe technology should make everyday food ordering
+                and delivery simpler for customers and businesses alike.
+            </p>
+
+        </section>
+
+    </div>
+
+
+    <!-- =========================================================
+         PRIVACY
+    ========================================================== -->
+
+    <div class="card">
+
+        <section>
+
+            <h2>Privacy & Security</h2>
+
+            <p>
+                Protecting user information is an important part of the
+                Soru platform. We take reasonable technical and
+                organizational measures to protect information and
+                maintain the security of our services.
+            </p>
+
+            <p>
+                For more information about how Soru collects, uses,
+                stores, and protects information, please refer to our
+                Privacy Policy.
+            </p>
+
+        </section>
+
+    </div>
+
+
+    <!-- =========================================================
+         CONTACT
+    ========================================================== -->
+
+    <div class="contact">
+
+        <h2>Contact Soru</h2>
+
+        <p>
+            If you have questions, feedback, or need assistance regarding
+            Soru, please contact our support team.
+        </p>
+
+        <a
+            class="email"
+            href="mailto:soru.delivery@gmail.com"
+        >
+            soru.delivery@gmail.com
+        </a>
+
+    </div>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Soru. All rights reserved.
+        </p>
+
+        <p>
+            Soru — Simple food ordering. Smarter delivery.
+        </p>
+
+    </footer>
+
+</div>
+
+</body>
+</html>
